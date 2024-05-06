@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Players>
+  <Player>
+    <Name>Pol</Name>
+    <Occupation>Técnico</Occupation>
+    <Exp>45</Exp>
+  </Player>
+  <Player>
+    <Name></Name>
+    <Occupation></Occupation>
+    <Exp>80</Exp>
+  </Player>
+  <Player>
+    <Name>POL2</Name>
+    <Occupation>Técnico</Occupation>
+    <Exp>45</Exp>
+  </Player>
+</Players>
