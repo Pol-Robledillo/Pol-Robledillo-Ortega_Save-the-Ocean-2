@@ -37,6 +37,7 @@
             CreatePlayerButton = new Button();
             ReturnButton = new Button();
             errorProvider1 = new ErrorProvider(components);
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
@@ -71,8 +72,9 @@
             // 
             // OccupationComboBox
             // 
+            OccupationComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             OccupationComboBox.FormattingEnabled = true;
-            OccupationComboBox.Location = new Point(76, 144);
+            OccupationComboBox.Location = new Point(76, 159);
             OccupationComboBox.Name = "OccupationComboBox";
             OccupationComboBox.Size = new Size(163, 23);
             OccupationComboBox.TabIndex = 3;
@@ -114,12 +116,22 @@
             // 
             errorProvider1.ContainerControl = this;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(56, 141);
+            label1.Name = "label1";
+            label1.Size = new Size(199, 15);
+            label1.TabIndex = 7;
+            label1.Text = "(Técnico 45 exp / Veterinario: 80 exp)";
+            // 
             // PlayerCreation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.maui_blue_ocean_abstract;
             ClientSize = new Size(323, 248);
+            Controls.Add(label1);
             Controls.Add(ReturnButton);
             Controls.Add(CreatePlayerButton);
             Controls.Add(CharacterCreationLbl);
@@ -144,5 +156,6 @@
         private Button CreatePlayerButton;
         private Button ReturnButton;
         private ErrorProvider errorProvider1;
+        private Label label1;
     }
 }

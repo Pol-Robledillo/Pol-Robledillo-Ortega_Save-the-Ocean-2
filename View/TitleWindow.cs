@@ -29,7 +29,7 @@ namespace Pol_Robledillo_Ortega___Save_the_Ocean_2
         private void FillGrid()
         {
             PlayerDAO playerDAO = new PlayerDAO();
-            List<Player> players = playerDAO.GetPlayers();
+            List<PlayerDTO> players = playerDAO.GetPlayers();
             players.Sort((x, y) => y.Exp.CompareTo(x.Exp));
             for (int i = 0; i < (players.Count() >= 5 ? 5 : players.Count()); i++)
             {

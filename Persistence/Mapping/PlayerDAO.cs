@@ -7,7 +7,7 @@ namespace Pol_Robledillo_Ortega___Save_the_Ocean_2.Persistence.Mapping
     public class PlayerDAO : IPlayerDAO
     {
         private readonly string XmlPath = "../../../Files/Players.xml";
-        public void SavePlayer(Player player)
+        public void SavePlayer(PlayerDTO player)
         {
             const string ErrorMsg = "An error occurred: {0}";
             try
@@ -42,29 +42,30 @@ namespace Pol_Robledillo_Ortega___Save_the_Ocean_2.Persistence.Mapping
             }
         }
 
-        public void UpdatePlayer(Player player)
+        public void UpdatePlayer(PlayerDTO player)
         {
             XDocument doc = XDocument.Load(XmlPath);
-            foreach (XElement element in doc.Descendants("Player"))
+
+            XElement playerToUpdate = doc.Descendants("Player").FirstOrDefault(x => x.Element("Name").Value == player.Name);
+            if (playerToUpdate != null)
             {
-                if (element.Element("Name").Value == player.Name)
-                {
-                    element.Element("Exp").Value = player.Exp.ToString();
-                }
+                playerToUpdate.Element("Occupation").Value = player.Occupation;
+                playerToUpdate.Element("Exp").Value = player.Exp.ToString();
             }
+            doc.Save(XmlPath);
         }
 
-        public List<Player> GetPlayers()
+        public List<PlayerDTO> GetPlayers()
         {
             XDocument doc;
 
             if (File.Exists(XmlPath))
             {
                 doc = XDocument.Load(XmlPath);
-                List<Player> players = new List<Player>();
+                List<PlayerDTO> players = new List<PlayerDTO>();
                 foreach (XElement element in doc.Descendants("Player"))
                 {
-                    Player player = new Player(
+                    PlayerDTO player = new PlayerDTO(
                         element.Element("Name").Value,
                         element.Element("Occupation").Value,
                         int.Parse(element.Element("Exp").Value)
@@ -75,7 +76,7 @@ namespace Pol_Robledillo_Ortega___Save_the_Ocean_2.Persistence.Mapping
             }
             else
             {
-                return new List<Player>();
+                return new List<PlayerDTO>();
             }
         }
     }

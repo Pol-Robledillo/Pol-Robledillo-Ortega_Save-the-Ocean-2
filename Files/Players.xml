@@ -1,18 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Players>
   <Player>
-    <Name>Pol</Name>
-    <Occupation>Técnico</Occupation>
-    <Exp>45</Exp>
-  </Player>
-  <Player>
-    <Name></Name>
-    <Occupation></Occupation>
+    <Name>pol1</Name>
+    <Occupation>Veterinario</Occupation>
     <Exp>80</Exp>
   </Player>
   <Player>
-    <Name>POL2</Name>
-    <Occupation>Técnico</Occupation>
-    <Exp>45</Exp>
+    <Name>pol2</Name>
+    <Occupation>Veterinario</Occupation>
+    <Exp>80</Exp>
+  </Player>
+  <Player>
+    <Name>pol3</Name>
+    <Occupation>Veterinario</Occupation>
+    <Exp>80</Exp>
+  </Player>
+  <Player>
+    <Name>pol4</Name>
+    <Occupation>Veterinario</Occupation>
+    <Exp>80</Exp>
+  </Player>
+  <Player>
+    <Name>pol5</Name>
+    <Occupation>Veterinario</Occupation>
+    <Exp>80</Exp>
+  </Player>
+  <Player>
+    <Name>pol6</Name>
+    <Occupation>Veterinario</Occupation>
+    <Exp>80</Exp>
+  </Player>
+  <Player>
+    <Name>pol robledillo</Name>
+    <Occupation>Veterinario</Occupation>
+    <Exp>180</Exp>
   </Player>
 </Players>

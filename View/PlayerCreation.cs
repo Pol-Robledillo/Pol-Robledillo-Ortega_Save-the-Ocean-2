@@ -41,7 +41,7 @@ namespace Pol_Robledillo_Ortega___Save_the_Ocean_2.View
             }
             if (allOk)
             {
-                Player player = new Player(NameInput.Text, OccupationComboBox.Text, OccupationComboBox.Text == "Técnico" ? 45 : 80);
+                PlayerDTO player = new PlayerDTO(NameInput.Text, OccupationComboBox.Text, OccupationComboBox.Text == "Técnico" ? 45 : 80);
                 PlayerDAO playerDAO = new PlayerDAO();
                 playerDAO.SavePlayer(player);
                 GameWindow gameWindow = new GameWindow();
